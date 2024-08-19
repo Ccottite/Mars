@@ -15,6 +15,7 @@ const App = () => {
         <Title subTitle='Productos' title='Que ofrecemos' />
         <Servicios />
         <About />
+        <Title subTitle='Marcas' title='Que confian en nosotros' />
       </div>
     </div>
   )

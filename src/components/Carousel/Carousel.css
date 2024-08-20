@@ -1,0 +1,37 @@
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  padding: 0 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.carousel-item.hovered img {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

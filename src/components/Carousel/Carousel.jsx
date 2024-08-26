@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './Carousel.css';
-import partner1 from '../../assets/partner1.jpg';
-import partner2 from '../../assets/partner2.jpg';
-import partner3 from '../../assets/partner3.jpg';
-import partner4 from '../../assets/partner4.jpg';
-import partner5 from '../../assets/partner5.jpg';
-import partner6 from '../../assets/partner6.jpg';
-import partner7 from '../../assets/partner7.jpg';
-import partner8 from '../../assets/partner8.jpg';
+import partner1 from '../../assets/logo-reflex.png';
+import partner2 from '../../assets/KINGTEX.png';
+import partner3 from '../../assets/STRONG.png';
+import partner4 from '../../assets/LOBO.png';
+import partner5 from '../../assets/BEKA.png';
+import partner6 from '../../assets/abc.png';
+import partner7 from '../../assets/CIERRES TAURO.png';
+import partner8 from '../../assets/GROZ.png';
+import partner9 from '../../assets/marquesinas amalucan.png';
 
 const logos = [
     { src: partner1, alt: 'logo1' },
@@ -18,9 +19,7 @@ const logos = [
     { src: partner6, alt: 'logo6' },
     { src: partner7, alt: 'logo7' },
     { src: partner8, alt: 'logo8' },
-    { src: partner1, alt: 'logo1' },
-    { src: partner2, alt: 'logo2' },
-    { src: partner3, alt: 'logo3' },
+    { src: partner9, alt: 'logo1' },
 
 ];
 
@@ -30,7 +29,7 @@ const Carousel = () => {
     return (
         <div className="carousel">
             <div className="carousel-track">
-                {logos.map((logo, index) => (
+                {logos.concat(logos).map((logo, index) => (
                     <div
                         key={index}
                         className={`carousel-item ${hoveredIndex === index ? 'hovered' : ''}`}

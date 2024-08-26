@@ -39,21 +39,27 @@ const Contact = () => {
         <div className='contact'>
             <div className="contact-col">
                 <h3>Envienos un mensaje <img src={msg_icon} alt="" /></h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, soluta? Architecto eius blanditiis, consequuntur, error facere exercitationem suscipit perspiciatis accusamus qui vero voluptate in alias ut, voluptatum voluptatem iure autem?</p>
+                <p>Nos complace atenderte. Contamos con sucursales en Puebla y Tlaxcala para tu conveniencia. Por favor, localiza la sucursal más cercana a ti. Si tienes dudas, preguntas o sugerencias, no dudes en enviarnos un mensaje.</p>
+                <br />
+                <p>Por favor, asegúrate de proporcionar información precisa para que podamos ofrecerte una respuesta rápida y eficaz.</p>
+                <br />
+                <p>Lunes a Viernes de: 9:00 a 18:00. Sábados de: 9:00 a 13:00HRS</p>
                 <ul>
-                    <li><img src={mail_icon} alt="" />Hiloslobo@mail.com</li>
-                    <li><img src={phone_icon} alt="" />2222411233</li>
-                    <li><img src={location_icon} alt="" />Dirección</li>
+                    <li><img src={mail_icon} alt="" />info@hiloslobo.com</li>
+                    <li><img src={phone_icon} alt="" />(222)-2-24-10-82</li>
+                    <li><img src={location_icon} alt="" />Local 4, Calle 7 Norte #701, Centro Historico Publa Pue. C.p72000.</li>
                 </ul>
             </div>
             <div className="contact-col">
                 <form onSubmit={onSubmit}>
                     <label>Nombre</label>
-                    <input type="text" name='name' placeholder='Ingresa tu nombre' required />
+                    <input type="text" name='name' placeholder='Ingrese su nombre' required />
+                    <label>Asunto</label>
+                    <input type="text" name='subject' placeholder='Ingrese el asunto por el cual se comunica' required />
                     <label>Numero de Telefono</label>
-                    <input type="tel" name='phone' placeholder='Ingresa tu numero de telefono' required />
+                    <input type="tel" name='phone' placeholder='Ingrese su numero de telefono' required />
                     <label>Coloca tu mensaje aqui</label>
-                    <textarea name="message" id="" rows="6" placeholder='Ingresa tu mensaje' required></textarea>
+                    <textarea name="message" id="" rows="6" placeholder='Ingrese su mensaje' required></textarea>
                     <button type='submit' className='btn dark-btn'>Enviar <img src={white_arrow} alt="" /></button>
                     <span>{result}</span>
                 </form>

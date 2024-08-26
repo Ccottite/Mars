@@ -1,5 +1,6 @@
 import React from 'react';
-import './Footer.css'; // Asegúrate de crear este archivo CSS
+import './Footer.css';
+import logo from '../../assets/logo_lobo.png'
 import facebook from '../../assets/facebook.png'
 import instagram from '../../assets/instagram.png'
 import x from '../../assets/x.png'
@@ -8,7 +9,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-logo">
-                    <img src="ruta-a-tu-logo" alt="lobo_logo" />
+                    <img src={logo} alt="lobo_logo" />
                 </div>
                 <div className="footer-links">
                     <a href="#inicio">Inicio</a>

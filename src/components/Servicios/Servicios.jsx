@@ -11,21 +11,21 @@ const Servicios = () => {
                 <img src="https://picsum.photos/id/10/400/450" alt="hilo_1"/>
                 <div className="caption">
                     <img src={calidad} alt="" />
-                    <p>Hilos</p>
+                    <p>Refacciones</p>
                 </div>
             </div>
             <div className="servicio">
                 <img src="https://picsum.photos/id/11/400/450" alt="" />
                 <div className="caption">
                     <img src={calidad} alt="" />
-                    <p>Cierres</p>
+                    <p>Hilos</p>
                 </div>
             </div>
             <div className="servicio">
                 <img src="https://picsum.photos/id/15/400/450" alt="" />
                 <div className="caption">
                     <img src={calidad} alt="" />
-                    <p>Refacciones</p>
+                    <p>Cierres</p>
                 </div>
             </div>
         </div>

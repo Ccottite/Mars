@@ -1,9 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../../assets/logo_lobo.png'
-import facebook from '../../assets/facebook.png'
-import instagram from '../../assets/instagram.png'
-import x from '../../assets/x.png'
 const Footer = () => {
     return (
         <footer className="footer">
@@ -11,7 +7,7 @@ const Footer = () => {
                 <div className="box">
                     <figure>
                         <a href="#">
-                            <img src="" alt="" />
+                            <img src="" alt="logo_lobo" />
                         </a>
                     </figure>
                 </div>

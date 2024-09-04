@@ -8,7 +8,8 @@ import Footer from './components/Footer/Footer'
 import Contact from './components/Contact/Contact'
 import Map from './components/Map/Map'
 import Items from './components/Items/Items'
-import Promotions from './components/Promotions/Promotions'
+import Cards from './components/CardsGrid/CardsGrid'
+
 
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
         <Title subTitle='Articulos Nuevos' title='Mira lo que tenemos para ti' />
         <Items />
         <Title subTitle='Estas son nuestras' title='Promociones para ti' />
-        <Promotions />
+        <Cards />
         <Title subTitle='Contactanos' title='Queremos escucharte' />
         <Contact />
       </div>

@@ -1,9 +1,5 @@
 import React from 'react'
 import './Contact.css'
-import msg_icon from '../../assets/messaje.png'
-import mail_icon from '../../assets/gmail.png'
-import phone_icon from '../../assets/phone.png'
-import location_icon from '../../assets/maps.png'
 import white_arrow from '../../assets/derecha.png'
 
 
@@ -38,16 +34,16 @@ const Contact = () => {
     return (
         <div className='contact'>
             <div className="contact-col">
-                <h3>Envienos un mensaje <img src={msg_icon} alt="" /></h3>
+                <h3>Envienos un mensaje <img src="{msg_icon}" alt="" /></h3>
                 <p>Nos complace atenderte. Contamos con sucursales en Puebla y Tlaxcala para tu conveniencia. Por favor, localiza la sucursal más cercana a ti. Si tienes dudas, preguntas o sugerencias, no dudes en enviarnos un mensaje.</p>
                 <br />
                 <p>Por favor, asegúrate de proporcionar información precisa para que podamos ofrecerte una respuesta rápida y eficaz.</p>
                 <br />
                 <p>Lunes a Viernes de: 9:00 a 18:00. Sábados de: 9:00 a 13:00HRS</p>
                 <ul>
-                    <li><img src={mail_icon} alt="" />info@hiloslobo.com</li>
-                    <li><img src={phone_icon} alt="" />(222)-2-24-10-82</li>
-                    <li><img src={location_icon} alt="" />Local 4, Calle 7 Norte #701, Centro Historico Publa Pue. C.p72000.</li>
+                    <li><img src="{mail_icon}" alt="icono_email" />info@hiloslobo.com</li>
+                    <li><img src="{phone_icon}" alt="icono_phone" />(222)-2-24-10-82</li>
+                    <li><img src="{location_icon}" alt="icono_ubi" />Local 4, Calle 7 Norte #701, Centro Historico Publa Pue. C.p72000.</li>
                 </ul>
             </div>
             <div className="contact-col">

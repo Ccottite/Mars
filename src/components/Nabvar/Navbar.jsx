@@ -22,7 +22,7 @@ const Navbar = () => {
                 <li><Link to='servicios' smooth={true} offset={-275} duration={500}>Nuestros Productos</Link></li>
                 <li><Link to='maps' smooth={true} offset={-295} duration={500}>Ubicaciones</Link></li>
                 <li><Link to='items' smooth={true} offset={-320} duration={500}>Articulos Nuevos</Link></li>
-                <li><Link to='promotions' smooth={true} offset={-380} duration={500}>Nuestras Promociones</Link></li>
+                <li><Link to='CardsGrid' smooth={true} offset={-380} duration={500}>Nuestras Promociones</Link></li>
                 <li><Link to='contact' smooth={true} offset={0} duration={500} className='btn'>Contactanos</Link></li>
             </ul>
         </nav>

@@ -1,0 +1,25 @@
+.animated-text {
+    position: relative;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 60px; /* Asegúrate de que el tamaño se ajuste al de tu `h1` */
+    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+}
+
+.cursor {
+    position: absolute;
+    right: 0;
+    background-color: red;
+    width: 2px;
+    height: 100%;
+    animation: blink .7s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        background-color: red;
+    }
+    25%, 75% {
+        background-color: transparent;
+    }
+}

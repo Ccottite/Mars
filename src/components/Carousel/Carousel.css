@@ -12,6 +12,16 @@
   will-change: transform;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 .carousel-item {
   flex: 0 0 auto;
   padding: 0 15px;
@@ -19,6 +29,9 @@
 }
 
 .carousel-item img {
+  width: 150px;
+  height: 90px; /* Ajusta la altura según sea necesario */
+  object-fit: contain; /* Esto mantendrá la proporción de la imagen y la ajustará al contenedor */
   filter: grayscale(100%);
   transition: filter 0.3s ease-in-out;
 }

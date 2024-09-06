@@ -1,33 +1,33 @@
 import React from 'react';
-import './Footer.css'; // Asegúrate de crear este archivo CSS
-import facebook from '../../assets/facebook.png'
-import instagram from '../../assets/instagram.png'
-import x from '../../assets/x.png'
+import './Footer.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer-container">
-                <div className="footer-logo">
-                    <img src="ruta-a-tu-logo" alt="lobo_logo" />
+            <div className="grupo-1">
+                <div className="box">
+                    <figure>
+                        <a href="#">
+                            <img src="" alt="logo_lobo" />
+                        </a>
+                    </figure>
                 </div>
-                <div className="footer-links">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#sobre-nosotros">Sobre Nosotros</a>
-                    <a href="#hilos">Hilos</a>
-                    <a href="#cierres">Cierres</a>
-                    <a href="#refacciones">Refacciones</a>
-                    <a href="#ubicaciones">Ubicaciones</a>
-                    <a href="#articulos-nuevos">Artículos Nuevos</a>
-                    <a href="#contactanos">Contáctanos</a>
+                <div className="box">
+                    <h2>Recuerda que!:</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iure.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, amet?</p>
                 </div>
-                <div className="footer-social">
-                    <a href="#"><img src={facebook} alt="Facebook" /></a>
-                    <a href="#"><img src={instagram} alt="Twitter" /></a>
-                    <a href="#"><img src={x} alt="Instagram" /></a>
+                <div className="box">
+                    <h2>Recuerda seguirnos en redes sociales</h2>
+                    <div className="redes-sociales">
+                        <a href="#" className="fa fa-facebook"></a>
+                        <a href="#" className="fa fa-instagram"></a>
+                        <a href="#" className="fa fa-twitter"></a>
+                        <a href="#" className="fa fa-youtube"></a>
+                    </div>
                 </div>
             </div>
-            <div className="footer-bottom">
-                <p>&copy; 2024 Hilos Lobo. Todos los derechos reservados.</p>
+            <div className="grupo-2">
+                <small>&copy; 2024 <b>Hilos Lobo</b> - Todos Los Derechos Reservados.</small>
             </div>
         </footer>
     );

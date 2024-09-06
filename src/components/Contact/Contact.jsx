@@ -1,6 +1,6 @@
 import React from 'react'
 import './Contact.css'
-import white_arrow from '../../assets/derecha.png'
+import white_arrow from '../../assets/iconos/derecha.png'
 
 
 const Contact = () => {

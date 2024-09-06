@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Carousel.css';
-import partner1 from '../../assets/logo-reflex.png';
-import partner2 from '../../assets/KINGTEX.png';
-import partner3 from '../../assets/STRONG.png';
-import partner4 from '../../assets/LOBO.png';
-import partner5 from '../../assets/BEKA.png';
-import partner6 from '../../assets/abc.png';
-import partner7 from '../../assets/CIERRES TAURO.png';
-import partner8 from '../../assets/GROZ.png';
-import partner9 from '../../assets/marquesinas amalucan.png';
+import partner1 from '../../assets/marcas/logo-reflex.png';
+import partner2 from '../../assets/marcas/KINGTEX.png';
+import partner3 from '../../assets/marcas/STRONG.png';
+import partner4 from '../../assets/marcas/LOBO.png';
+import partner5 from '../../assets/marcas/BEKA.png';
+import partner6 from '../../assets/marcas/abc.png';
+import partner7 from '../../assets/marcas/CIERRES TAURO.png';
+import partner8 from '../../assets/marcas/GROZ.png';
+import partner9 from '../../assets/marcas/marquesinas amalucan.png';
 
 const logos = [
     { src: partner1, alt: 'logo1' },

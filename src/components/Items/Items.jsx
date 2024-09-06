@@ -1,10 +1,10 @@
 import './Items.css'
-import next_icon from '../../assets/right-arrow.png'
-import back_icon from '../../assets/left-arrow.png'
-import foto1 from '../../assets/foto1.jpeg'
-import foto2 from '../../assets/foto2.jpeg'
-import foto3 from '../../assets/foto3.jpeg'
-import foto4 from '../../assets/foto4.jpeg'
+import next_icon from '../../assets/iconos/right-arrow.png'
+import back_icon from '../../assets/iconos/left-arrow.png'
+import foto1 from '../../assets/productos/adhesivo.png'
+import foto2 from '../../assets/productos/bobina.png'
+import foto3 from '../../assets/productos/carrete.png'
+import foto4 from '../../assets/productos/adhesivo.png'
 import { useRef } from 'react'
 
 const Items = () => {

@@ -1,5 +1,5 @@
 import './Hero.css'
-import derecha from '../../assets/derecha.png'
+import derecha from '../../assets/iconos/derecha.png'
 import AnimatedText from '../AnimatedText/AnimatedText'
 
 const Hero = () => {

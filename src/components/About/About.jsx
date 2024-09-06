@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
-import about_img from '../../assets/about_img.jpg'
-import play_icon from '../../assets/play_icon.png'
+import about_img from '../../assets/lobomascota.png'
+//import play_icon from '../../assets/play_icon.png'
 
 
 const About = () => {
@@ -9,7 +9,6 @@ const About = () => {
         <div className='about'>
             <div className="about-left">
                 <img src={about_img} alt="about_img" className='about-img' />
-                <img src={play_icon} alt="play_img" className='play-icon' />
             </div>
             <div className="about-right">
                 <h3>Sobre Nosotros</h3>

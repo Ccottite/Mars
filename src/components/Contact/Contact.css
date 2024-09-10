@@ -20,6 +20,10 @@
     margin-bottom: 20px;
 }
 
+.contact-col h3 i {
+    padding-left:10px;
+}
+
 .contact-col h3 img {
     width: 35px;
     margin-left: 10px;
@@ -33,12 +37,10 @@
 .contact-col ul li {
     display: flex;
     align-items: center;
-    margin: 20px 0;
 }
 
-.contact-col ul li img {
-    width: 25px;
-    margin-right: 10px;
+.contact-col ul img {
+    color:black;
 }
 
 .contact form input, .contact form textarea {

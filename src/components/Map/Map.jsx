@@ -33,7 +33,8 @@ const Locations = [
 
 const Mapa = () => {
   return (
-    <MapContainer center={[19.05215987587411, -98.20014994417494]} zoom={25} style={{ height: "500px", width: "100%" }}>
+
+    <MapContainer center={[19.194806139233997, -98.27463402644018]} zoom={10} style={{ height: "500px", width: "100%", zIndex: 0 }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

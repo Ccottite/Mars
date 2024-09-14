@@ -5,7 +5,6 @@
     justify-content: space-between;
     width: 90%;
     padding-top: 25px;
-    padding-top: 25px;
 }
 
 .about-left {
@@ -21,14 +20,6 @@
     width: 65%;
     border-radius: 10px;
 }
-
-/*.play-icon {
-    width: 60px;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
-}*/
 
 .about h3 {
     font-weight: 600;
@@ -50,23 +41,50 @@
     font-size: 20px;
 }
 
-@media (max-width:650px) {
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
     .about {
-        width: 100%;
-    }
-
-    .about-right p {
-        font-size: 15px;
-        text-align: center;
-        flex-basis: 100%;
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: center;
     }
 
     .about-left {
-        display: none;
+        order: 2; /* La imagen se muestra después del texto */
+        flex-basis: 100%; /* Ocupa el 100% del ancho */
+        text-align: center;
+        margin-top: 20px; /* Añadir espacio entre el texto y la imagen */
     }
 
-    .about h2 h3 {
-        margin: auto;
+    .about-right {
+        order: 1; /* El texto se muestra primero */
+        flex-basis: 100%; /* Ocupa el 100% del ancho */
+        text-align: center;
     }
 
+    .about-img {
+        width: 80%; /* Ajustar el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .about h2 {
+        font-size: 30px; /* Ajustar el tamaño del título */
+    }
+
+    .about p {
+        font-size: 18px; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (menores a 480px) */
+@media (max-width: 480px) {
+    .about-img {
+        width: 100%; /* La imagen ocupa todo el ancho en pantallas muy pequeñas */
+    }
+
+    .about h2 {
+        font-size: 28px; /* Reducir aún más el tamaño del título */
+    }
+
+    .about p {
+        font-size: 16px; /* Ajustar el tamaño del texto */
+    }
 }

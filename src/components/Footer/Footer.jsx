@@ -1,13 +1,15 @@
 import React from 'react';
 import './Footer.css';
+import logo from '../../assets/logo.png'
+
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="grupo-1">
                 <div className="box">
-                    <figure>
+                    <figure className='logo_footer'>
                         <a href="#">
-                            <img src="" alt="logo_lobo" />
+                            <img src={logo} alt="logo_lobo"/>
                         </a>
                     </figure>
                 </div>
@@ -17,7 +19,7 @@ const Footer = () => {
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, amet?</p>
                 </div>
                 <div className="box">
-                    <h2>Recuerda seguirnos en redes sociales</h2>
+                    <h2>Siguenos en redes sociales</h2>
                     <div className="redes-sociales">
                         <a href="#" className="fa fa-facebook"></a>
                         <a href="#" className="fa fa-instagram"></a>

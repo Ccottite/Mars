@@ -34,16 +34,16 @@ const Contact = () => {
     return (
         <div className='contact'>
             <div className="contact-col">
-                <h3>Envienos un mensaje <img src="{msg_icon}" alt="" /></h3>
+                <h3>Envienos un mensaje <i class="fa-solid fa-comment"></i></h3>
                 <p>Nos complace atenderte. Contamos con sucursales en Puebla y Tlaxcala para tu conveniencia. Por favor, localiza la sucursal más cercana a ti. Si tienes dudas, preguntas o sugerencias, no dudes en enviarnos un mensaje.</p>
                 <br />
                 <p>Por favor, asegúrate de proporcionar información precisa para que podamos ofrecerte una respuesta rápida y eficaz.</p>
                 <br />
-                <p>Lunes a Viernes de: 9:00 a 18:00. Sábados de: 9:00 a 13:00HRS</p>
                 <ul>
-                    <li><img src="{mail_icon}" alt="icono_email" />info@hiloslobo.com</li>
-                    <li><img src="{phone_icon}" alt="icono_phone" />(222)-2-24-10-82</li>
-                    <li><img src="{location_icon}" alt="icono_ubi" />Local 4, Calle 7 Norte #701, Centro Historico Publa Pue. C.p72000.</li>
+                    <li><i class="fa-solid fa-calendar-days"></i>Lunes a Viernes de: 9:00 a 18:00. Sábados de: 9:00 a 13:00 HRS</li>
+                    <li><i class="fa-solid fa-envelope"></i>info@hiloslobo.com</li>
+                    <li><i class="fa-solid fa-phone"></i>(222)-2-24-10-82</li>
+                    <li><i class="fa-solid fa-location-dot"></i>Local 4, Calle 7 Norte #701, Centro Historico Publa Pue. C.p72000.</li>
                 </ul>
             </div>
             <div className="contact-col">
@@ -61,6 +61,7 @@ const Contact = () => {
                 </form>
             </div>
         </div>
+
     )
 }
 

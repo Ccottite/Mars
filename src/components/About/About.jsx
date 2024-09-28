@@ -1,4 +1,3 @@
-import React from 'react'
 import './About.css'
 import about_img from '../../assets/lobomascota.png'
 //import play_icon from '../../assets/play_icon.png'

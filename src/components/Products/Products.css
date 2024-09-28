@@ -1,47 +1,143 @@
-.products {
-    margin: 80px auto;
-    width: 90%;
+/* Estilos de la sección de imágenes */
+.image-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permitir que las cartas se ajusten en filas nuevas */
+    justify-content: space-around;
+    padding: 40px;
 }
 
-.product img {
-    width: 100px;
-    border-radius: 10px;
-    display: block;
+/* Cada carta de imagen */
+.image-card {
+    position: relative;
+    width: 300px;
+    /* Ancho base para pantallas grandes */
+    height: 400px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.product {
-    flex-basis: 31%;
+/* Imagen dentro de la carta */
+.category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.caption {
-    border-radius: 10px;
+/* Efecto hover: la imagen se agranda */
+.image-card:hover .category-image {
+    transform: scale(1.1);
+}
+
+/* Overlay para mostrar el nombre de la categoría */
+.overlay {
     position: absolute;
     top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
     right: 0;
-    background: rgba(0, 15, 152, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    cursor: pointer;
+    height: 100%;
+    width: 100%;
     opacity: 0;
-    padding-top: 70%;
-    transition: 0.4s;
+    transition: 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.caption img {
-    width: 60px;
-    margin-bottom: 10px;
-
+/* Texto dentro del overlay */
+.text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.program:hover .caption {
+/* Efecto hover: mostrar el overlay */
+.image-card:hover .overlay {
     opacity: 1;
-    padding-top:0;
+}
+
+/* Estilos para el modal */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    /* Más flexible para pantallas pequeñas */
+    max-width: 1500px;
+    /* Tamaño máximo para pantallas grandes */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Botón para cerrar el modal */
+.close-button {
+    background-color: #eb3434;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.close-button:hover {
+    background-color: #ff6f6f;
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    .image-card {
+        width: 200px;
+        height: 300px;
+    }
+
+    .modal-content {
+        width: 95%;
+        /* Más espacio en pantallas medianas */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .image-card {
+        width: 100%;
+        /* Las cartas ocupan todo el ancho disponible */
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .modal-content {
+        width: 100%;
+        /* Modal ocupa todo el ancho */
+        padding: 15px;
+        /* Reducir padding en móviles */
+    }
+
+    .close-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }

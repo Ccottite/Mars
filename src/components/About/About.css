@@ -77,7 +77,7 @@
 /* Media query para pantallas muy pequeñas (menores a 480px) */
 @media (max-width: 480px) {
     .about-img {
-        width: 100%; /* La imagen ocupa todo el ancho en pantallas muy pequeñas */
+        width: 60%; /* La imagen ocupa todo el ancho en pantallas muy pequeñas */
     }
 
     .about h2 {

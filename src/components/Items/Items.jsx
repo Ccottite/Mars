@@ -1,101 +1,114 @@
-import './Items.css'
-import next_icon from '../../assets/iconos/right-arrow.png'
-import back_icon from '../../assets/iconos/left-arrow.png'
-import foto1 from '../../assets/productos/adhesivo.png'
-import foto2 from '../../assets/productos/bobina.png'
-import foto3 from '../../assets/productos/carrete.png'
-import foto4 from '../../assets/productos/adhesivo.png'
-import { useRef } from 'react'
+import React, { useState } from 'react';
+import './Items.css';
 
-const Items = () => {
+// Lista de artículos
+const articles = [
+    {
+        id: 1,
+        title: '¿Como puedo cambiar una aguja?',
+        category: 'Tutoriales',
+        time: 'Hace 12 horas',
+        image: 'https://via.placeholder.com/400x400',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo temporibus vero? Ipsam inventore quasi corrupti aliquam qui quod quia.',
+        user: {
+            name: 'ING Nato',
+            avatar: 'https://via.placeholder.com/50', // Imagen del avatar
+            date: 'Septiembre 29'
+        },
+    },
+    {
+        id: 2,
+        title: '¿Que hilo debo utilizar para este tipo de tela?',
+        category: 'Guia de inicio',
+        time: 'Hace 11 horas',
+        image: 'https://via.placeholder.com/400x400',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo temporibus vero? Ipsam inventore quasi corrupti aliquam qui quod quia.',
+        user: {
+            name: 'ING Nato',
+            avatar: 'https://via.placeholder.com/50', // Imagen del avatar
+            date: 'Abril 29'
+        },
+    },
+    {
+        id: 3,
+        title: 'Herramientas necesarias para mantenimiento',
+        category: 'Guia de inicio',
+        time: 'Hace 10 horas',
+        image: 'https://via.placeholder.com/400x400',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo temporibus vero? Ipsam inventore quasi corrupti aliquam qui quod quia.',
+        user: {
+            name: 'ING Nato',
+            avatar: 'https://via.placeholder.com/50', // Imagen del avatar
+            date: 'Agosto 15'
+        },
+    },
+    // Puedes agregar más artículos en el futuro
+];
 
-    const slider = useRef();
-    let tx = 0;
-
-    const slideForward = () => {
-        if (tx > -50) {
-            tx -= 25;
-        }
-        slider.current.style.transform = `translatex(${tx}%)`
-    }
-
-    const slideBackward = () => {
-        if (tx < 0) {
-            tx += 25;
-        }
-        slider.current.style.transform = `translatex(${tx}%)`
-    }
-
+// Componente para mostrar cada tarjeta de artículo
+const ArticleCard = ({ article, onShowMore }) => {
     return (
-        <div className='items'>
-            <img src={next_icon} alt="flecha_izquierda" className='next-btn' onClick={slideForward} />
-            <img src={back_icon} alt="flecha_derecha" className='back-btn' onClick={slideBackward} />
-            <div className="slider">
-                <ul ref={slider}>
-                    <li>
-                        <div className="slide">
-                            <div className="item-info">
-                                <img src={foto1} alt="item-1" />
-                                <div>
-                                    <h3>Item °1</h3>
-                                    <span>Item subtitle</span>
-                                </div>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda delectus itaque,
-                                nesciunt totam eum cumque necessitatibus recusandae quo, sunt in commodi beatae quibusdam corrupti temporibus rem est amet possimus. Vero?
-                            </p>
+        <div className="article-card">
+            <img src={article.image} alt={article.title} className="article-image" />
+            <div className="article-info">
+                <div className="article-header">
+                    <span className="category-tag">{article.category}</span>
+                    <span className="time-tag">{article.time}</span>
+                </div>
+                <h3 className="article-title">{article.title}</h3>
+                <button className="more-button" onClick={() => onShowMore(article)}>
+                    Ver más
+                </button>
+
+                {/* Sección de usuario, fecha y comentarios */}
+                <div className="article-user-info">
+                    <img src={article.user.avatar} alt={article.user.name} className="user-avatar" />
+                    <div className="user-details">
+                        <strong>{article.user.name}</strong>
+                        <div className="user-meta">
+                            <span className="user-date"><i className="fa fa-calendar"></i> {article.user.date}</span>
                         </div>
-                    </li>
-                    <li>
-                        <div className="slide">
-                            <div className="item-info">
-                                <img src={foto2} alt="item-1" />
-                                <div>
-                                    <h3>Item °2</h3>
-                                    <span>Item subtitle</span>
-                                </div>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda delectus itaque,
-                                nesciunt totam eum cumque necessitatibus recusandae quo, sunt in commodi beatae quibusdam corrupti temporibus rem est amet possimus. Vero?
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="slide">
-                            <div className="item-info">
-                                <img src={foto3} alt="item-1" />
-                                <div>
-                                    <h3>Item °3</h3>
-                                    <span>Item subtitle</span>
-                                </div>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda delectus itaque,
-                                nesciunt totam eum cumque necessitatibus recusandae quo, sunt in commodi beatae quibusdam corrupti temporibus rem est amet possimus. Vero?
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="slide">
-                            <div className="item-info">
-                                <img src={foto4} alt="item-1" />
-                                <div>
-                                    <h3>Item °4</h3>
-                                    <span>Item subtitle</span>
-                                </div>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda delectus itaque,
-                                nesciunt totam eum cumque necessitatibus recusandae quo, sunt in commodi beatae quibusdam corrupti temporibus rem est amet possimus. Vero?
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Items
+// Componente principal
+const Articles = () => {
+    const [selectedArticle, setSelectedArticle] = useState(null); // Estado para controlar el popup
+
+    // Función para abrir el popup con más información del artículo
+    const handleShowMore = (article) => {
+        setSelectedArticle(article);
+    };
+
+    // Función para cerrar el popup
+    const handleClosePopup = () => {
+        setSelectedArticle(null);
+    };
+
+    return (
+        <div>
+            <div className="articles-container">
+                {articles.map(article => (
+                    <ArticleCard key={article.id} article={article} onShowMore={handleShowMore} />
+                ))}
+            </div>
+
+            {/* Popup para mostrar más información */}
+            {selectedArticle && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <h3>{selectedArticle.title}</h3>
+                        <p>{selectedArticle.content}</p>
+                        <button className="close-button" onClick={handleClosePopup}>Cerrar</button>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default Articles;
